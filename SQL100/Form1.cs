@@ -30,5 +30,11 @@ namespace SQL100
             form.Show();
             
         }
+
+        private void income_Click(object sender, EventArgs e)
+        {
+            Form4 form = new Form4();
+            form.Show();
+        }
     }
 }

@@ -342,5 +342,12 @@
       <End Role="Employees" EntitySet="Employees" />
       <End Role="Territories" EntitySet="Territories" />
     </AssociationSet>
+    <FunctionImport Name="HotProduct" ReturnType="Collection(NorthwindModel.HotProduct_Result)">
+      <Parameter Name="year" Mode="In" Type="String" />
+    </FunctionImport>
   </EntityContainer>
+  <ComplexType Name="HotProduct_Result">
+    <Property Type="String" Name="ProductName" Nullable="false" MaxLength="40" />
+    <Property Type="Int32" Name="total" Nullable="true" />
+  </ComplexType>
 </Schema>
