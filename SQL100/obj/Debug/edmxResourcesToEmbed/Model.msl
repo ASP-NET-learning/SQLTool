@@ -183,5 +183,6 @@
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Revenue" FunctionName="NorthwindModel.Store.Revenue" />
   </EntityContainerMapping>
 </Mapping>

@@ -57,8 +57,43 @@ namespace SQL100
 
             textBox3.Text = productArray[2];
             saleText3.Text = saleArray[2];
+
+            //------------------------------------
+
+            double[] revenue = new double[3];
+            for (int i = 0; i < years.Length; i++)
+            {
+                var queryRevenue = from re in context.Revenue(years[i]) select re;
+                var yearRevenue = queryRevenue.First();
+                double byYear = yearRevenue.Value;
+                revenue[i] = byYear;
+            }
+
+            string y1996 = revenue[0].ToString("C0");
+            re96.Text = y1996;
+
+            string y1997 = revenue[1].ToString("C0");
+            re97.Text = y1997;
+
+            string y1998 = revenue[2].ToString("C0");
+            re98.Text = y1998;
+
+            double profit = revenue[2] - revenue[1];
+            if(profit > 0) 
+            {
+                Growth.Text = $"有賺{profit:C0}元";
+            }
+            else if(profit < 0) 
+            {
+                Growth.Text = $"虧損{profit:C0}元";
+            }
+            else
+            {
+                Growth.Text = "沒賺沒賠";
+            }
+
+
         }
-
-
+        
     }
 }

@@ -35,16 +35,12 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.re96 = new System.Windows.Forms.TextBox();
+            this.re97 = new System.Windows.Forms.TextBox();
+            this.re98 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.sale = new System.Windows.Forms.Label();
             this.saleText1 = new System.Windows.Forms.TextBox();
@@ -52,6 +48,8 @@
             this.saleText2 = new System.Windows.Forms.TextBox();
             this.sale3 = new System.Windows.Forms.Label();
             this.saleText3 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.Growth = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // button1
@@ -122,36 +120,6 @@
             this.textBox3.Size = new System.Drawing.Size(100, 22);
             this.textBox3.TabIndex = 2;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label4.Location = new System.Drawing.Point(235, 166);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(78, 21);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "總成長率:";
-            this.label4.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(319, 132);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(100, 22);
-            this.textBox4.TabIndex = 2;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label5.Location = new System.Drawing.Point(235, 132);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(78, 21);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "季成長率:";
-            this.label5.Click += new System.EventHandler(this.label1_Click);
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -185,37 +153,29 @@
             this.label8.Text = "1998總營收:";
             this.label8.Click += new System.EventHandler(this.label1_Click);
             // 
-            // textBox5
+            // re96
             // 
-            this.textBox5.Location = new System.Drawing.Point(120, 133);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(100, 22);
-            this.textBox5.TabIndex = 2;
+            this.re96.Location = new System.Drawing.Point(120, 133);
+            this.re96.Name = "re96";
+            this.re96.ReadOnly = true;
+            this.re96.Size = new System.Drawing.Size(100, 22);
+            this.re96.TabIndex = 2;
             // 
-            // textBox6
+            // re97
             // 
-            this.textBox6.Location = new System.Drawing.Point(120, 164);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.ReadOnly = true;
-            this.textBox6.Size = new System.Drawing.Size(100, 22);
-            this.textBox6.TabIndex = 2;
+            this.re97.Location = new System.Drawing.Point(120, 164);
+            this.re97.Name = "re97";
+            this.re97.ReadOnly = true;
+            this.re97.Size = new System.Drawing.Size(100, 22);
+            this.re97.TabIndex = 2;
             // 
-            // textBox7
+            // re98
             // 
-            this.textBox7.Location = new System.Drawing.Point(120, 196);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.ReadOnly = true;
-            this.textBox7.Size = new System.Drawing.Size(100, 22);
-            this.textBox7.TabIndex = 2;
-            // 
-            // textBox9
-            // 
-            this.textBox9.Location = new System.Drawing.Point(319, 165);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.ReadOnly = true;
-            this.textBox9.Size = new System.Drawing.Size(100, 22);
-            this.textBox9.TabIndex = 2;
+            this.re98.Location = new System.Drawing.Point(120, 196);
+            this.re98.Name = "re98";
+            this.re98.ReadOnly = true;
+            this.re98.Size = new System.Drawing.Size(100, 22);
+            this.re98.TabIndex = 2;
             // 
             // button2
             // 
@@ -285,19 +245,37 @@
             this.saleText3.Size = new System.Drawing.Size(41, 22);
             this.saleText3.TabIndex = 2;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label4.Location = new System.Drawing.Point(242, 134);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(114, 21);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "今年是否賺錢?";
+            this.label4.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // Growth
+            // 
+            this.Growth.Location = new System.Drawing.Point(362, 133);
+            this.Growth.Name = "Growth";
+            this.Growth.ReadOnly = true;
+            this.Growth.Size = new System.Drawing.Size(116, 22);
+            this.Growth.TabIndex = 2;
+            // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(545, 239);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.re98);
+            this.Controls.Add(this.re97);
+            this.Controls.Add(this.re96);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.Growth);
             this.Controls.Add(this.saleText3);
             this.Controls.Add(this.saleText2);
             this.Controls.Add(this.saleText1);
@@ -306,7 +284,6 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.sale3);
@@ -330,16 +307,12 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox re96;
+        private System.Windows.Forms.TextBox re97;
+        private System.Windows.Forms.TextBox re98;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label sale;
         private System.Windows.Forms.TextBox saleText1;
@@ -347,5 +320,7 @@
         private System.Windows.Forms.TextBox saleText2;
         private System.Windows.Forms.Label sale3;
         private System.Windows.Forms.TextBox saleText3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox Growth;
     }
 }

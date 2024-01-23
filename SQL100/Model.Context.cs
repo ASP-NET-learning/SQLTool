@@ -48,5 +48,14 @@ namespace SQL100
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<HotProduct_Result>("HotProduct", yearParameter);
         }
+    
+        public virtual ObjectResult<Nullable<double>> Revenue(string year)
+        {
+            var yearParameter = year != null ?
+                new ObjectParameter("year", year) :
+                new ObjectParameter("year", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<double>>("Revenue", yearParameter);
+        }
     }
 }

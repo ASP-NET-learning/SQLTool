@@ -345,6 +345,9 @@
     <FunctionImport Name="HotProduct" ReturnType="Collection(NorthwindModel.HotProduct_Result)">
       <Parameter Name="year" Mode="In" Type="String" />
     </FunctionImport>
+    <FunctionImport Name="Revenue" ReturnType="Collection(Double)">
+      <Parameter Name="year" Mode="In" Type="String" />
+    </FunctionImport>
   </EntityContainer>
   <ComplexType Name="HotProduct_Result">
     <Property Type="String" Name="ProductName" Nullable="false" MaxLength="40" />

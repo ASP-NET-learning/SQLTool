@@ -327,6 +327,9 @@
         <Function Name="HotProduct" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="year" Type="varchar" Mode="In" />
         </Function>
+        <Function Name="Revenue" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="year" Type="varchar" Mode="In" />
+        </Function>
         <EntityContainer Name="NorthwindModelStoreContainer">
           <EntitySet Name="Categories" EntityType="Self.Categories" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="CustomerCustomerDemo" EntityType="Self.CustomerCustomerDemo" Schema="dbo" store:Type="Tables" />
@@ -742,7 +745,10 @@
             <End Role="Territories" EntitySet="Territories" />
           </AssociationSet>
           <FunctionImport Name="HotProduct" ReturnType="Collection(NorthwindModel.HotProduct_Result)">
-            <Parameter Name="year" Mode="In" Type="String" />
+          <Parameter Name="year" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="Revenue" ReturnType="Collection(Double)">
+          <Parameter Name="year" Mode="In" Type="String" />
           </FunctionImport>
         </EntityContainer>
         <ComplexType Name="HotProduct_Result">
@@ -937,6 +943,7 @@
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="Revenue" FunctionName="NorthwindModel.Store.Revenue" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
