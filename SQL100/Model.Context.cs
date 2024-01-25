@@ -57,5 +57,15 @@ namespace SQL100
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<double>>("Revenue", yearParameter);
         }
+    
+        public virtual ObjectResult<Restock_Result> Restock()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Restock_Result>("Restock");
+        }
+    
+        public virtual ObjectResult<NewRestock_Result> NewRestock()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<NewRestock_Result>("NewRestock");
+        }
     }
 }

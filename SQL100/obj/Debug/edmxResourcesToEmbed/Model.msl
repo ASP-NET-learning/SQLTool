@@ -184,5 +184,18 @@
       </ResultMapping>
     </FunctionImportMapping>
     <FunctionImportMapping FunctionImportName="Revenue" FunctionName="NorthwindModel.Store.Revenue" />
+    <FunctionImportMapping FunctionImportName="NewRestock" FunctionName="NorthwindModel.Store.NewRestock">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="NorthwindModel.NewRestock_Result">
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="SupplierID" ColumnName="SupplierID" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="ContactName" ColumnName="ContactName" />
+          <ScalarProperty Name="Restocks" ColumnName="Restocks" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
   </EntityContainerMapping>
 </Mapping>

@@ -31,6 +31,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.income = new System.Windows.Forms.Button();
+            this.Inventory = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -63,11 +64,22 @@
             this.income.UseVisualStyleBackColor = true;
             this.income.Click += new System.EventHandler(this.income_Click);
             // 
+            // Inventory
+            // 
+            this.Inventory.Location = new System.Drawing.Point(38, 218);
+            this.Inventory.Name = "Inventory";
+            this.Inventory.Size = new System.Drawing.Size(190, 49);
+            this.Inventory.TabIndex = 0;
+            this.Inventory.Text = "庫存管理";
+            this.Inventory.UseVisualStyleBackColor = true;
+            this.Inventory.Click += new System.EventHandler(this.Inventory_Click);
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(266, 373);
+            this.Controls.Add(this.Inventory);
             this.Controls.Add(this.income);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -84,6 +96,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button income;
+        private System.Windows.Forms.Button Inventory;
     }
 }
 

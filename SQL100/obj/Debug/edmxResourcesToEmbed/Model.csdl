@@ -348,9 +348,27 @@
     <FunctionImport Name="Revenue" ReturnType="Collection(Double)">
       <Parameter Name="year" Mode="In" Type="String" />
     </FunctionImport>
+    <FunctionImport Name="Restock" ReturnType="Collection(NorthwindModel.Restock_Result)" />
+    <FunctionImport Name="NewRestock" ReturnType="Collection(NorthwindModel.NewRestock_Result)" />
   </EntityContainer>
   <ComplexType Name="HotProduct_Result">
     <Property Type="String" Name="ProductName" Nullable="false" MaxLength="40" />
     <Property Type="Int32" Name="total" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="Restock_Result">
+    <Property Type="Int32" Name="ProductID" Nullable="false" />
+    <Property Type="String" Name="ProductName" Nullable="false" MaxLength="40" />
+    <Property Type="Int32" Name="SupplierID" Nullable="true" />
+    <Property Type="String" Name="CompanyName" Nullable="true" MaxLength="40" />
+    <Property Type="Int32" Name="Restocks" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="NewRestock_Result">
+    <Property Type="Int32" Name="ProductID" Nullable="false" />
+    <Property Type="String" Name="ProductName" Nullable="false" MaxLength="40" />
+    <Property Type="Int32" Name="SupplierID" Nullable="true" />
+    <Property Type="String" Name="CompanyName" Nullable="true" MaxLength="40" />
+    <Property Type="String" Name="Phone" Nullable="true" MaxLength="24" />
+    <Property Type="String" Name="ContactName" Nullable="true" MaxLength="30" />
+    <Property Type="Int32" Name="Restocks" Nullable="true" />
   </ComplexType>
 </Schema>

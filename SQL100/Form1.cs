@@ -36,5 +36,11 @@ namespace SQL100
             Form4 form = new Form4();
             form.Show();
         }
+
+        private void Inventory_Click(object sender, EventArgs e)
+        {
+            Form5 form = new Form5();
+            form.Show();
+        }
     }
 }

@@ -17,3 +17,4 @@ A:\MISIT\ADONET\AdoProject\SQLTool\SQL100\obj\Debug\SQL100.exe
 A:\MISIT\ADONET\AdoProject\SQLTool\SQL100\obj\Debug\SQL100.pdb
 A:\MISIT\ADONET\AdoProject\SQLTool\SQL100\bin\Debug\SQL100.pdb
 A:\MISIT\ADONET\AdoProject\SQLTool\SQL100\obj\Debug\SQL100.Form4.resources
+A:\MISIT\ADONET\AdoProject\SQLTool\SQL100\obj\Debug\SQL100.Form5.resources
