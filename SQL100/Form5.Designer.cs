@@ -40,8 +40,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.companyNameTextBox = new System.Windows.Forms.TextBox();
             this.companyPhoneTextBox = new System.Windows.Forms.TextBox();
             this.compyContactTextBox = new System.Windows.Forms.TextBox();
@@ -51,8 +49,8 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(805, 17);
-            this.button1.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.button1.Location = new System.Drawing.Point(641, 20);
+            this.button1.Margin = new System.Windows.Forms.Padding(8);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(134, 54);
             this.button1.TabIndex = 1;
@@ -154,24 +152,6 @@
             this.label8.TabIndex = 7;
             this.label8.Text = "聯絡人:";
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(691, 83);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(158, 31);
-            this.label9.TabIndex = 7;
-            this.label9.Text = "推薦補充清單";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(615, 123);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(290, 94);
-            this.textBox2.TabIndex = 5;
-            // 
             // companyNameTextBox
             // 
             this.companyNameTextBox.Location = new System.Drawing.Point(373, 119);
@@ -220,7 +200,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(956, 347);
+            this.ClientSize = new System.Drawing.Size(808, 308);
             this.Controls.Add(this.Clear);
             this.Controls.Add(this.query);
             this.Controls.Add(this.compyContactTextBox);
@@ -229,11 +209,9 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.label9);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.howMany);
-            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.ynTextBox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -241,7 +219,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.Margin = new System.Windows.Forms.Padding(8);
             this.Name = "Form5";
             this.Text = "Form5";
             this.ResumeLayout(false);
@@ -263,8 +241,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox companyNameTextBox;
         private System.Windows.Forms.TextBox companyPhoneTextBox;
         private System.Windows.Forms.TextBox compyContactTextBox;

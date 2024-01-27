@@ -27,28 +27,43 @@ namespace SQL100
         private void query_Click(object sender, EventArgs e)
         {
             string userInput = ProductNameTextBox.Text.Trim();
-            var query = from p in context.NewRestock()
-                        where p.ProductName == userInput
-                        select p;
-            var q = query.First();
-            int supNumber = Convert.ToInt16(q.Restocks);
-            if (supNumber > 0) 
+            try
             {
-                ynTextBox.Text = "Y";
-                howMany.Text = supNumber.ToString() + "單位";
+                var query = from p in context.NewRestock()
+                            where p.ProductName == userInput
+                            select p;
+                var q = query.First();
+                int supNumber = Convert.ToInt16(q.Restocks);
+                if (supNumber > 0)
+                {
+                    ynTextBox.Text = "Y";
+                    howMany.Text = supNumber.ToString() + "單位";
+                }
+                else
+                {
+                    ynTextBox.Text = "N";
+                }
+                companyNameTextBox.Text = q.CompanyName;
+                companyPhoneTextBox.Text = q.Phone;
+                compyContactTextBox.Text = q.ContactName;
             }
-            else
+            catch
             {
-                ynTextBox.Text = "N";
+                MessageBox.Show("查無產品");
             }
-            companyNameTextBox.Text = q.CompanyName;
-            companyPhoneTextBox.Text = q.Phone;
-            compyContactTextBox.Text = q.ContactName;
+            
         }
 
         private void Clear_Click(object sender, EventArgs e)
         {
-            
+            foreach (Control control in Controls)
+            {
+                if (control is TextBox)
+                {
+                    TextBox textBox = (TextBox)control;
+                    textBox.Text = string.Empty;
+                }
+            }
         }
     }
 }
