@@ -1,30 +1,3 @@
-```
-USE [Northwind]
-GO
-/****** Object:  StoredProcedure [dbo].[NewRestock]    Script Date: 2024/11/3 下午 10:08:49 ******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
-ALTER PROCEDURE [dbo].[NewRestock]
-AS
-	SELECT 
-		ProductID,
-		ProductName,
-		s.SupplierID,
-		s.CompanyName,
-		s.Phone,
-		s.ContactName,
-		CASE
-			WHEN UnitsInStock < UnitsOnOrder 
-			THEN (UnitsOnOrder - UnitsInStock) + ReorderLevel * 2
-			ELSE 0
-			END AS 'Restocks'
-	FROM Products p
-	LEFT JOIN
-		Suppliers  s ON s.SupplierID = p.SupplierID
-
-```
 ## 使用方法 :
 
 簡易查詢可以讓使用者用下拉選單找指定表，以及透過輸入找前N筆資料
