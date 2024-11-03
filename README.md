@@ -1,3 +1,29 @@
+```
+USE [Northwind]
+GO
+/****** Object:  StoredProcedure [dbo].[HotProduct]    Script Date: 2024/11/3 下午 09:50:59 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+ALTER PROCEDURE [dbo].[HotProduct]
+	@year varchar(10) = null
+AS
+	if(@year is null) begin
+		set @year = 1996
+	end
+
+	SELECT TOP 1 p.ProductName, SUM(od.Quantity) AS 'total'
+	FROM [Order Details] od
+	INNER JOIN
+		Orders o ON o.OrderID = od.OrderID
+	INNER JOIN
+		Products p ON p.ProductID = od.ProductID
+	WHERE YEAR(o.OrderDate) = @year
+	GROUP BY p.ProductName
+	ORDER BY 'total' DESC
+
+```
 ## 使用方法 :
 
 簡易查詢可以讓使用者用下拉選單找指定表，以及透過輸入找前N筆資料
