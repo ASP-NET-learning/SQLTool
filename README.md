@@ -1,26 +1,28 @@
 ```
 USE [Northwind]
 GO
-/****** Object:  StoredProcedure [dbo].[Revenue]    Script Date: 2024/11/3 下午 10:04:26 ******/
+/****** Object:  StoredProcedure [dbo].[NewRestock]    Script Date: 2024/11/3 下午 10:08:49 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
-ALTER PROCEDURE [dbo].[Revenue]
-	@year varchar(10)
+ALTER PROCEDURE [dbo].[NewRestock]
 AS
-	if(@year is null) 
-		begin
-			set @year = 1996
-		commit
-	end
-
-	SELECT ROUND(SUM(od.Quantity*od.UnitPrice*(1-od.Discount)),3) AS '營收'
-	FROM Orders o
+	SELECT 
+		ProductID,
+		ProductName,
+		s.SupplierID,
+		s.CompanyName,
+		s.Phone,
+		s.ContactName,
+		CASE
+			WHEN UnitsInStock < UnitsOnOrder 
+			THEN (UnitsOnOrder - UnitsInStock) + ReorderLevel * 2
+			ELSE 0
+			END AS 'Restocks'
+	FROM Products p
 	LEFT JOIN
-		[Order Details] od ON o.OrderID = od.OrderID
-	WHERE YEAR(o.OrderDate) = @year
-
+		Suppliers  s ON s.SupplierID = p.SupplierID
 
 ```
 ## 使用方法 :
