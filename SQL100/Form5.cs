@@ -46,6 +46,24 @@ namespace SQL100
                 companyNameTextBox.Text = q.CompanyName;
                 companyPhoneTextBox.Text = q.Phone;
                 compyContactTextBox.Text = q.ContactName;
+
+                var query2 = from od in context.Order_Details
+                             join p in context.Products on od.ProductID equals p.ProductID
+                             join o in context.Orders on od.OrderID equals o.OrderID
+                             where p.ProductName == userInput
+                             select new
+                             {
+                                 RequiredDate = o.RequiredDate,
+                                 ShippedDate = o.ShippedDate,
+                                 OrderId = od.OrderID,
+                                 ProductName = p.ProductName,
+                                 UnitsInStock = p.UnitsInStock,
+                                 UnitsOnOrder = p.UnitsOnOrder,
+                                 ReorderLevel = p.ReorderLevel,
+                                 UnitPrice = od.UnitPrice,
+                                 Quantity = od.Quantity,
+                             };
+                dataGridView1.DataSource = query2.ToList();
             }
             catch
             {

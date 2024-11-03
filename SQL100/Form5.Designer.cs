@@ -45,14 +45,18 @@
             this.compyContactTextBox = new System.Windows.Forms.TextBox();
             this.query = new System.Windows.Forms.Button();
             this.Clear = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(641, 20);
+            this.button1.Location = new System.Drawing.Point(557, 17);
             this.button1.Margin = new System.Windows.Forms.Padding(8);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(134, 54);
+            this.button1.Size = new System.Drawing.Size(88, 39);
             this.button1.TabIndex = 1;
             this.button1.Text = "返回首頁";
             this.button1.UseVisualStyleBackColor = true;
@@ -63,15 +67,15 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(12, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(116, 31);
+            this.label1.Size = new System.Drawing.Size(78, 21);
             this.label1.TabIndex = 2;
             this.label1.Text = "查詢產品:";
             // 
             // ProductNameTextBox
             // 
-            this.ProductNameTextBox.Location = new System.Drawing.Point(134, 17);
+            this.ProductNameTextBox.Location = new System.Drawing.Point(96, 17);
             this.ProductNameTextBox.Name = "ProductNameTextBox";
-            this.ProductNameTextBox.Size = new System.Drawing.Size(248, 39);
+            this.ProductNameTextBox.Size = new System.Drawing.Size(248, 29);
             this.ProductNameTextBox.TabIndex = 3;
             // 
             // label2
@@ -79,16 +83,16 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(12, 83);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(98, 31);
+            this.label2.Size = new System.Drawing.Size(66, 21);
             this.label2.TabIndex = 4;
             this.label2.Text = "補充否?";
             // 
             // ynTextBox
             // 
-            this.ynTextBox.Location = new System.Drawing.Point(134, 75);
+            this.ynTextBox.Location = new System.Drawing.Point(84, 80);
             this.ynTextBox.Name = "ynTextBox";
             this.ynTextBox.ReadOnly = true;
-            this.ynTextBox.Size = new System.Drawing.Size(57, 39);
+            this.ynTextBox.Size = new System.Drawing.Size(57, 29);
             this.ynTextBox.TabIndex = 5;
             // 
             // label3
@@ -96,7 +100,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(12, 131);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(0, 31);
+            this.label3.Size = new System.Drawing.Size(0, 21);
             this.label3.TabIndex = 4;
             // 
             // label4
@@ -104,76 +108,76 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(12, 131);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(122, 31);
+            this.label4.Size = new System.Drawing.Size(82, 21);
             this.label4.TabIndex = 6;
             this.label4.Text = "補充多少?";
             // 
             // howMany
             // 
-            this.howMany.Location = new System.Drawing.Point(134, 123);
+            this.howMany.Location = new System.Drawing.Point(100, 123);
             this.howMany.Name = "howMany";
             this.howMany.ReadOnly = true;
-            this.howMany.Size = new System.Drawing.Size(111, 39);
+            this.howMany.Size = new System.Drawing.Size(111, 29);
             this.howMany.TabIndex = 5;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(330, 78);
+            this.label5.Location = new System.Drawing.Point(251, 64);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(134, 31);
+            this.label5.Size = new System.Drawing.Size(90, 21);
             this.label5.TabIndex = 7;
             this.label5.Text = "供應商資訊";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(251, 119);
+            this.label6.Location = new System.Drawing.Point(251, 97);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(116, 31);
+            this.label6.Size = new System.Drawing.Size(78, 21);
             this.label6.TabIndex = 7;
             this.label6.Text = "公司名稱:";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(251, 168);
+            this.label7.Location = new System.Drawing.Point(251, 150);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(116, 31);
+            this.label7.Size = new System.Drawing.Size(78, 21);
             this.label7.TabIndex = 7;
             this.label7.Text = "公司電話:";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(275, 212);
+            this.label8.Location = new System.Drawing.Point(251, 193);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(92, 31);
+            this.label8.Size = new System.Drawing.Size(62, 21);
             this.label8.TabIndex = 7;
             this.label8.Text = "聯絡人:";
             // 
             // companyNameTextBox
             // 
-            this.companyNameTextBox.Location = new System.Drawing.Point(373, 119);
+            this.companyNameTextBox.Location = new System.Drawing.Point(348, 94);
             this.companyNameTextBox.Name = "companyNameTextBox";
             this.companyNameTextBox.ReadOnly = true;
-            this.companyNameTextBox.Size = new System.Drawing.Size(198, 39);
+            this.companyNameTextBox.Size = new System.Drawing.Size(198, 29);
             this.companyNameTextBox.TabIndex = 8;
             // 
             // companyPhoneTextBox
             // 
-            this.companyPhoneTextBox.Location = new System.Drawing.Point(373, 168);
+            this.companyPhoneTextBox.Location = new System.Drawing.Point(348, 142);
             this.companyPhoneTextBox.Name = "companyPhoneTextBox";
             this.companyPhoneTextBox.ReadOnly = true;
-            this.companyPhoneTextBox.Size = new System.Drawing.Size(198, 39);
+            this.companyPhoneTextBox.Size = new System.Drawing.Size(198, 29);
             this.companyPhoneTextBox.TabIndex = 9;
             // 
             // compyContactTextBox
             // 
-            this.compyContactTextBox.Location = new System.Drawing.Point(373, 213);
+            this.compyContactTextBox.Location = new System.Drawing.Point(348, 185);
             this.compyContactTextBox.Name = "compyContactTextBox";
             this.compyContactTextBox.ReadOnly = true;
-            this.compyContactTextBox.Size = new System.Drawing.Size(198, 39);
+            this.compyContactTextBox.Size = new System.Drawing.Size(198, 29);
             this.compyContactTextBox.TabIndex = 10;
             // 
             // query
@@ -196,11 +200,31 @@
             this.Clear.UseVisualStyleBackColor = true;
             this.Clear.Click += new System.EventHandler(this.Clear_Click);
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 236);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(661, 192);
+            this.panel1.TabIndex = 13;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 3);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(661, 189);
+            this.dataGridView1.TabIndex = 0;
+            // 
             // Form5
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 31F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(808, 308);
+            this.ClientSize = new System.Drawing.Size(661, 428);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.Clear);
             this.Controls.Add(this.query);
             this.Controls.Add(this.compyContactTextBox);
@@ -219,9 +243,12 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(8);
             this.Name = "Form5";
             this.Text = "Form5";
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -246,5 +273,7 @@
         private System.Windows.Forms.TextBox compyContactTextBox;
         private System.Windows.Forms.Button query;
         private System.Windows.Forms.Button Clear;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

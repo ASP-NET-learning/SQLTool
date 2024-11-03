@@ -268,7 +268,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(545, 239);
+            this.ClientSize = new System.Drawing.Size(548, 244);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.re98);
             this.Controls.Add(this.re97);
@@ -291,6 +291,7 @@
             this.Controls.Add(this.sale);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form4";
             this.Text = "Form4";
             this.ResumeLayout(false);

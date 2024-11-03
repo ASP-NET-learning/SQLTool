@@ -26,8 +26,6 @@ namespace SQL100
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            
-
         }
 
         private void queryButton_Click(object sender, EventArgs e)
@@ -61,6 +59,7 @@ namespace SQL100
 
                 var query2 = from o in context.Orders
                              join od in context.Order_Details on o.OrderID equals od.OrderID
+                             join p in context.Products on od.ProductID equals p.ProductID
                              where o.OrderID == InputText
                              let TotalPrice =
                                 (double?)od.Quantity * (double?)od.UnitPrice * (1 - (double?)od.Discount ?? 0)
@@ -68,6 +67,7 @@ namespace SQL100
                              {
                                  o.OrderID,
                                  o.CustomerID,
+                                 p.ProductName,
                                  total = TotalPrice
                              };
 
@@ -76,27 +76,17 @@ namespace SQL100
                 totalPrice.Text = t.ToString();
                 dataGridView1.DataSource = query2.ToList();
 
-
-
             }
             catch
             {
                 MessageBox.Show("查無此訂單");
             }
 
-            
+        }
 
-            
-            
-            
-
-
+        private void Form3_Load(object sender, EventArgs e)
+        {
 
         }
     }
 }
-
-/*
- 
-
- */

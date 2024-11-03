@@ -171,6 +171,7 @@
             this.ClientSize = new System.Drawing.Size(548, 352);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form2";
             this.Text = "Form2";
             this.panel1.ResumeLayout(false);
