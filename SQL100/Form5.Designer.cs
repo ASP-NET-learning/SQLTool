@@ -47,13 +47,14 @@
             this.Clear = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.print_btn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(557, 17);
+            this.button1.Location = new System.Drawing.Point(608, 11);
             this.button1.Margin = new System.Windows.Forms.Padding(8);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(88, 39);
@@ -182,7 +183,7 @@
             // 
             // query
             // 
-            this.query.Location = new System.Drawing.Point(388, 17);
+            this.query.Location = new System.Drawing.Point(359, 11);
             this.query.Name = "query";
             this.query.Size = new System.Drawing.Size(76, 39);
             this.query.TabIndex = 11;
@@ -192,7 +193,7 @@
             // 
             // Clear
             // 
-            this.Clear.Location = new System.Drawing.Point(470, 17);
+            this.Clear.Location = new System.Drawing.Point(442, 11);
             this.Clear.Name = "Clear";
             this.Clear.Size = new System.Drawing.Size(76, 39);
             this.Clear.TabIndex = 12;
@@ -206,7 +207,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 236);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(661, 192);
+            this.panel1.Size = new System.Drawing.Size(707, 192);
             this.panel1.TabIndex = 13;
             // 
             // dataGridView1
@@ -216,14 +217,25 @@
             this.dataGridView1.Location = new System.Drawing.Point(0, 3);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(661, 189);
+            this.dataGridView1.Size = new System.Drawing.Size(707, 189);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // print_btn
+            // 
+            this.print_btn.Location = new System.Drawing.Point(525, 11);
+            this.print_btn.Name = "print_btn";
+            this.print_btn.Size = new System.Drawing.Size(76, 39);
+            this.print_btn.TabIndex = 14;
+            this.print_btn.Text = "列印";
+            this.print_btn.UseVisualStyleBackColor = true;
+            this.print_btn.Click += new System.EventHandler(this.print_btn_Click);
             // 
             // Form5
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(661, 428);
+            this.ClientSize = new System.Drawing.Size(707, 428);
+            this.Controls.Add(this.print_btn);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.Clear);
             this.Controls.Add(this.query);
@@ -275,5 +287,6 @@
         private System.Windows.Forms.Button Clear;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button print_btn;
     }
 }

@@ -62,13 +62,13 @@ namespace SQL100
                              join p in context.Products on od.ProductID equals p.ProductID
                              where o.OrderID == InputText
                              let TotalPrice =
-                                (double?)od.Quantity * (double?)od.UnitPrice * (1 - (double?)od.Discount ?? 0)
+                                (double)od.Quantity * (double)od.UnitPrice * (1 - (double?)od.Discount ?? 0)
                              select new
                              {
                                  o.OrderID,
                                  o.CustomerID,
                                  p.ProductName,
-                                 total = TotalPrice
+                                 total = Math.Round(TotalPrice, 3)
                              };
 
 
