@@ -1,27 +1,26 @@
 ```
 USE [Northwind]
 GO
-/****** Object:  StoredProcedure [dbo].[HotProduct]    Script Date: 2024/11/3 下午 09:50:59 ******/
+/****** Object:  StoredProcedure [dbo].[Revenue]    Script Date: 2024/11/3 下午 10:04:26 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
-ALTER PROCEDURE [dbo].[HotProduct]
-	@year varchar(10) = null
+ALTER PROCEDURE [dbo].[Revenue]
+	@year varchar(10)
 AS
-	if(@year is null) begin
-		set @year = 1996
+	if(@year is null) 
+		begin
+			set @year = 1996
+		commit
 	end
 
-	SELECT TOP 1 p.ProductName, SUM(od.Quantity) AS 'total'
-	FROM [Order Details] od
-	INNER JOIN
-		Orders o ON o.OrderID = od.OrderID
-	INNER JOIN
-		Products p ON p.ProductID = od.ProductID
+	SELECT ROUND(SUM(od.Quantity*od.UnitPrice*(1-od.Discount)),3) AS '營收'
+	FROM Orders o
+	LEFT JOIN
+		[Order Details] od ON o.OrderID = od.OrderID
 	WHERE YEAR(o.OrderDate) = @year
-	GROUP BY p.ProductName
-	ORDER BY 'total' DESC
+
 
 ```
 ## 使用方法 :
